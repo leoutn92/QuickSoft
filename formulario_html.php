@@ -63,7 +63,14 @@ $indep3 = ($canthb / ( $jornada * $tiempo * $diaLaboral));
 
 	?>
 </div>
-
+<script src="bundle.js"></script>
+<Script>
+  var simplex = require('simplex-solver');
+  var result = simplex.minimize('80000x + 100000y', [
+  '960x >= 8500'
+  ]);
+  console.log(result);
+</Script>
 <script src="https://www.desmos.com/api/v1.0/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 <div id="calculator" style="width: 600px; height: 400px;"></div>
 <script type="text/javascript">
